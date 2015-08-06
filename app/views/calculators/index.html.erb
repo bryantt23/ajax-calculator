@@ -1,0 +1,5 @@
+<!-- ajax post request -->
+<%= form_tag calculators_path, :method => :post, :remote => true do %>
+  <%= text_field_tag :data, nil, :onkeyup => "this.form.sub.click()" %> = <span id="sum"></span>
+  <%= submit_tag "ok", :name => "sub" %>
+  <% end %>
