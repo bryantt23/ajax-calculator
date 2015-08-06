@@ -1,5 +1,11 @@
-<!-- ajax post request -->
-<%= form_tag calculators_path, :method => :post, :remote => true do %>
-  <%= text_field_tag :data, nil, :onkeyup => "this.form.sub.click()" %> = <span id="sum"></span>
-  <%= submit_tag "ok", :name => "sub" %>
-  <% end %>
+
+<h1> Calculator for 2 integers </h1>
+<h3>Well, it can add, subtract and multiply!</h3>
+
+
+<%= form_tag(calculators_path, :method => :post, :remote => true) do %>
+<%= text_field_tag(:a) %>
+<%= select_tag(:op_id, options_for_select([[' + ', '1'], [' - ', '2'], [' x ', '3']]) ) %>
+<%= text_field_tag (:b) %> = <span id="sum"></span>
+<%= submit_tag "ok", :name => "sub" %>
+<% end %>
