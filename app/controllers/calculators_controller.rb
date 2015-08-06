@@ -21,6 +21,10 @@ class CalculatorsController < ApplicationController
       @result = calc.subtract
     when '3'
       @result = calc.multiply
+    when '4'
+      @result = calc.divide
+    when '5'
+      @result = calc.exponent
     else
       @result = calc.add
     end

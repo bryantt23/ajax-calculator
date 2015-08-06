@@ -19,4 +19,12 @@ class Calculation
     @a * @b
   end
 
+  def divide
+    @a / @b
+  end
+
+  def exponent
+    @a ** @b
+  end
+
 end
